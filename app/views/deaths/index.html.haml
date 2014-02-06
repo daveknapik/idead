@@ -1,0 +1,15 @@
+%html
+  %head
+  %body
+    - if @dead.empty?
+      %h1 Everybody lives!
+    - else
+      - @dead.each do |person|
+        %h1= "#{person.name} is dead"
+
+    - if @unknown.present?
+      %h2 Current non-deathy trending topics:
+      %ul
+        - @unknown.each do |i|
+          %li= i.name
+

@@ -1,0 +1,9 @@
+== README
+
+Bring out your dead!
+
+iDead cross-references trending topics on Twitter against Wikipedia (with a bit of natural language processing along the way) to see if any of the trending topics concern someone who has recently shuffled off this mortal coil.
+
+* Ruby 2.0.0 p353 / Rails 4.0.2
+
+* NLP provided by Treat: https://github.com/louismullie/treat
