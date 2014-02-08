@@ -24,7 +24,7 @@ class TrendingTopic
       nnp_trends.each do |trend|
         page = Wikipedia.find trend
 
-        if page.categories.present? && page.categories.select {|c| c =~ /deaths/}.present?
+        if page.categories.present? && page.categories.select {|c| c =~ /#{Time.now.year} deaths/}.present?
           dead << Person.new(name: page.title, status: "dead")
         else
           unknown << Person.new(name: page.title, status: "unknown")
