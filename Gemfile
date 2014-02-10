@@ -51,6 +51,8 @@ group :development, :test do
   gem "pry-debugger"
   gem "pry-rescue"
   gem "pry-stack_explorer"
+  gem "factory_girl_rails"
+  gem "faker"
 end
 
 gem "haml"

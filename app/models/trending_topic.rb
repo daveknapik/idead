@@ -3,13 +3,17 @@ require "treat"
 include Treat::Core::DSL
 
 class TrendingTopic
+  include ActiveModel::Model
+
+  attr_accessor :name, :status
+
   def self.filter_by_tag(trending_topics, tag="NNP")
     trending_topics.map do |trend|
       w = word(trend)
       w.apply :tag
 
       if w.tag == tag
-        w.to_s
+        self.new(name: w.to_s)
       end
     end.compact
   end
@@ -22,12 +26,15 @@ class TrendingTopic
 
     unless nnp_trends.empty?
       nnp_trends.each do |trend|
-        page = Wikipedia.find trend
+        wikipedia_page = Wikipedia.find trend.name
 
-        if page.categories.present? && page.categories.select {|c| c =~ /#{Time.now.year} deaths/}.present?
-          dead << Person.new(name: page.title, status: "dead")
+        if wikipedia_page.categories.present? && wikipedia_page.categories.select {|c| c =~ /#{Time.now.year} deaths/}.present?
+          dead << WikipediaResult::Person.new(name: wikipedia_page.title, status: "dead")
+        elsif wikipedia_page.categories.present? # at least if categories are present, it means a Wikipedia page exists for trend.name
+          unknown << WikipediaResult::Generic.new(name: wikipedia_page.title, status: "unknown")
         else
-          unknown << Person.new(name: page.title, status: "unknown")
+          trend.status = "unknown"
+          unknown << trend
         end
       end
     end
