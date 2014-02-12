@@ -44,6 +44,7 @@ end
 
 group :test do
   gem "rspec-rails"
+  gem "webmock"
 end
 
 group :development, :test do
@@ -60,4 +61,5 @@ gem "twitter"
 gem "treat"
 gem "engtagger"
 gem "wikipedia-client"
+gem "guardian-content", github: "chrsgrrtt/contentapi-ruby"
 gem "dalli"

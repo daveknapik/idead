@@ -1,49 +1,43 @@
 require 'spec_helper'
 describe TrendingTopic do
-  let(:trending_topics) { ["fantastic", "doctor", "David Tennant", "Matt Smith", "London", "time", "travel"] }
+  let(:trends) { ["fantastic", "doctor", "David Tennant", "Matt Smith", "London", "time", "travel"] }
   
   describe ".filter_by_tag" do
-    it "returns an array of TrendingTopic objects" do
-      filtered_topics = TrendingTopic.filter_by_tag(trending_topics)
-      filtered_topics.each do |ft|
-        expect(ft).to be_a TrendingTopic
+    it "returns an array of strings" do
+      filtered_trends = TrendingTopic.filter_by_tag(trends)
+      filtered_trends.each do |ft|
+        expect(ft).to be_a String
       end
     end
 
     context "no tag specified" do
-      subject { TrendingTopic.filter_by_tag(trending_topics) }
+      subject { TrendingTopic.filter_by_tag(trends) }
 
       it "filters an array of strings by NNP" do
-        expect(subject.map(&:name)).to include "David Tennant"
-        expect(subject.map(&:name)).to include "Matt Smith"
-        expect(subject.map(&:name)).to include "London"
+        expect(subject).to eq ["David Tennant", "Matt Smith", "London"]
       end
     end
 
     context "tag specified" do
-      subject { TrendingTopic.filter_by_tag(trending_topics, "NN") }
+      subject { TrendingTopic.filter_by_tag(trends, "NN") }
 
       it "filters an array of strings by the specified tag" do
-        expect(subject.map(&:name)).to include "doctor"
-        expect(subject.map(&:name)).to include "time"
-        expect(subject.map(&:name)).to include "travel"
+        expect(subject).to eq ["doctor", "time", "travel"]
       end
     end
   end
 
   describe ".cross_reference_wikipedia" do
-    let(:wikipedia_page) { double(:page) }
-    let(:categories)     { Array.new }
-    let(:Wikipedia)      { double(:Wikipedia) }
+    let(:wikipedia_page)  { double(:page) }
+    let(:categories)      { Array.new }
+    let(:Wikipedia)       { double(:Wikipedia) }
+    let(:filtered_trends) { TrendingTopic.filter_by_tag(trends, "NNP") }
+    let(:trending_topics) { filtered_trends.map {|trend| TrendingTopic.new(name: trend)} }
     
     before do
       allow(Wikipedia).to receive(:find).and_return(wikipedia_page)
       allow(wikipedia_page).to receive(:categories).and_return(categories)
-    end
-
-    it "calls .filter_by_tag with trending_topics and 'NNP'" do
-      expect(TrendingTopic).to receive(:filter_by_tag).with(trending_topics, "NNP").and_return(Array.new)
-      TrendingTopic.cross_reference_wikipedia(trending_topics)
+      TrendingTopic.any_instance.stub(:find_news_items)
     end
 
     it "returns a hash with keys 'dead' and 'unknown', both of which hold arrays" do
@@ -63,7 +57,6 @@ describe TrendingTopic do
         topics_cross_referenced = TrendingTopic.cross_reference_wikipedia(trending_topics)
 
         topics_cross_referenced[:unknown].each do |topic|
-          expect(topic).to be_a TrendingTopic
           expect(topic.status).to eq "unknown"
         end
       end
@@ -76,7 +69,6 @@ describe TrendingTopic do
         topics_cross_referenced = TrendingTopic.cross_reference_wikipedia(trending_topics)
 
         topics_cross_referenced[:dead].each do |topic|
-          expect(topic).to be_a WikipediaResult::Person
           expect(topic.status).to eq "dead"
         end
       end
@@ -91,10 +83,18 @@ describe TrendingTopic do
         expect(topics_cross_referenced[:dead]).to be_empty
 
         topics_cross_referenced[:unknown].each do |topic|
-          expect(topic).to be_a WikipediaResult::Generic
           expect(topic.status).to eq "unknown"
         end
       end
+    end
+  end
+
+  describe "#find_news_items" do
+    it "should search for news items by quoted topic name from yesterday through today" do
+      topic_name = "Tom Baker"
+      GuardianContent::Content.stub(:search).and_return([GuardianContent::Content.new])
+      expect(GuardianContent::Content).to receive(:search).with("\"#{topic_name}\"", {conditions: {from: (Date.today - 1).to_s, to: Date.today.to_s}})
+      TrendingTopic.new(name: topic_name)
     end
   end
 end

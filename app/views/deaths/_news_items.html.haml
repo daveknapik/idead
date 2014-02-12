@@ -1,0 +1,3 @@
+%ul
+  - news_items.each do |news_item|
+    %li= link_to(news_item.title, news_item.url)
