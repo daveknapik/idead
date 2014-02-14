@@ -1,21 +1,18 @@
-%html
-  %head
-  %body
-    - if @dead.empty?
-      %h1 Everybody lives!
-    - else
-      - @dead.each do |topic|
-        %h1= "#{link_to(topic.name, topic.wikipedia_url)} is dead".html_safe
+- if @dead.empty?
+  %h1 Everybody lives!
+- else
+  - @dead.each do |topic|
+    %h1= "#{link_to(topic.name, topic.wikipedia_url)} is dead".html_safe
+    = render partial: "news_items", locals: {news_items: topic.news_items} unless topic.news_items.blank?
+
+- if @unknown.present?
+  %h2 Current non-deathy trending topics:
+  %ul
+    - @unknown.each do |topic|
+      - if topic.wikipedia_url.present?
+        %li= link_to(topic.name, topic.wikipedia_url)
         = render partial: "news_items", locals: {news_items: topic.news_items} unless topic.news_items.blank?
 
-    - if @unknown.present?
-      %h2 Current non-deathy trending topics:
-      %ul
-        - @unknown.each do |topic|
-          - if topic.wikipedia_url.present?
-            %li= link_to(topic.name, topic.wikipedia_url)
-            = render partial: "news_items", locals: {news_items: topic.news_items} unless topic.news_items.blank?
-
-          - else
-            %li= topic.name
-            = render partial: "news_items", locals: {news_items: topic.news_items} unless topic.news_items.blank?
+      - else
+        %li= topic.name
+        = render partial: "news_items", locals: {news_items: topic.news_items} unless topic.news_items.blank?
