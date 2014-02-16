@@ -14,7 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = I18n.t("devise.omniauth_callbacks.success", kind: "Twitter")
       redirect_to root_url
     else
-      session[:omniauth] = omniauth.except('extra')
+      session[:omniauth] = omniauth.except("extra")
       redirect_to new_user_registration_url
     end
   end
