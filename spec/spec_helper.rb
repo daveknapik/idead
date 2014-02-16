@@ -1,9 +1,10 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV["RAILS_ENV"] ||= 'test'
+ENV["RAILS_ENV"] = 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
+# require 'rspec/autorun' -- commented out for working with Zeus
 require 'webmock/rspec'
+require 'capybara/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -42,6 +43,10 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
 
   config.include Devise::TestHelpers, type: :controller
 

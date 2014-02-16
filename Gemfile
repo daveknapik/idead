@@ -41,11 +41,16 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+group :development do
+   gem 'guard-rspec', require: false
+end
 
 group :test do
   gem "rspec-rails"
   gem "webmock"
   gem "database_cleaner"
+  gem "capybara"
+  gem "vcr"
 end
 
 group :development, :test do

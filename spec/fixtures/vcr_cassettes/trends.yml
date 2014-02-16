@@ -1,0 +1,878 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/trends/place.json?id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Twitter Ruby Gem 5.6.0
+      Authorization:
+      - OAuth oauth_consumer_key="aEQFwroPH2lIzZQRkwvmQ", oauth_nonce="c9646805c49da9a907d8c46e171befde",
+        oauth_signature="1jPqiqovSJT2BcHjWGuKRctc40w%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1392566644", oauth_token="1108-0fMJi3ztzY3iwJYTbhBZVoYkfpj3i6GBLWJUvvY42mj4M",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '455'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:03 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Sun, 16 Feb 2014 16:04:03 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tfe
+      Set-Cookie:
+      - guest_id=v1%3A139256664381180624; Domain=.twitter.com; Path=/; Expires=Tue,
+        16-Feb-2016 16:04:03 UTC
+      - lang=en
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '13'
+      X-Rate-Limit-Reset:
+      - '1392566666'
+      X-Transaction:
+      - 7f3d4b4e6266bbac
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '[{"trends":[{"name":"#10FactsAboutMe","url":"http:\/\/twitter.com\/search?q=%2310FactsAboutMe","promoted_content":null,"query":"%2310FactsAboutMe","events":null},{"name":"#SametEcemileTkib","url":"http:\/\/twitter.com\/search?q=%23SametEcemileTkib","promoted_content":null,"query":"%23SametEcemileTkib","events":null},{"name":"#BritishBand","url":"http:\/\/twitter.com\/search?q=%23BritishBand","promoted_content":null,"query":"%23BritishBand","events":null},{"name":"#AvrilLavigneMidasIvoryAstro","url":"http:\/\/twitter.com\/search?q=%23AvrilLavigneMidasIvoryAstro","promoted_content":null,"query":"%23AvrilLavigneMidasIvoryAstro","events":null},{"name":"Andy
+        Gray","url":"http:\/\/twitter.com\/search?q=%22Andy+Gray%22","promoted_content":null,"query":"%22Andy+Gray%22","events":null},{"name":"#ARSLIV","url":"http:\/\/twitter.com\/search?q=%23ARSLIV","promoted_content":null,"query":"%23ARSLIV","events":null},{"name":"Sassuolo
+        0-2 Napoli","url":"http:\/\/twitter.com\/search?q=%22Sassuolo+0-2+Napoli%22","promoted_content":null,"query":"%22Sassuolo+0-2+Napoli%22","events":null},{"name":"Juventus
+        3-1 Chievo","url":"http:\/\/twitter.com\/search?q=%22Juventus+3-1+Chievo%22","promoted_content":null,"query":"%22Juventus+3-1+Chievo%22","events":null},{"name":"Getafe
+        - Real Madrid","url":"http:\/\/twitter.com\/search?q=%22Getafe+-+Real+Madrid%22","promoted_content":null,"query":"%22Getafe+-+Real+Madrid%22","events":null},{"name":"Atalanta
+        0-4 Parma","url":"http:\/\/twitter.com\/search?q=%22Atalanta+0-4+Parma%22","promoted_content":null,"query":"%22Atalanta+0-4+Parma%22","events":null}],"as_of":"2014-02-16T16:04:03Z","created_at":"2014-02-16T16:01:29Z","locations":[{"name":"Worldwide","woeid":1}]}]'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:04 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%2210%20Facts%20About%20Me%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:05 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:07 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - 23d7b59f04382d579c73834810d3dbfd
+      X-Gu-Jas:
+      - 23d7b59f04382d579c73834810d3dbfd!2023056110@qtp-970481529-3703
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1a-12.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:08 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22Samet%20Ecemile%20Tkib%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:08 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:08 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - 6754e2dd7f2f3186236c70b9408f4d0b
+      X-Gu-Jas:
+      - 6754e2dd7f2f3186236c70b9408f4d0b!1577071281@qtp-970481529-3679
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1b-11.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:08 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22British%20Band%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:08 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:08 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - ffff35d7c269cacb5e48a6bb37236239
+      X-Gu-Jas:
+      - ffff35d7c269cacb5e48a6bb37236239!2078076240@qtp-970481529-3754
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1b-13.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:09 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22Avril%20Lavigne%20Midas%20Ivory%20Astro%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:09 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:09 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - c9fbb165d63c6bedbe65d182028517f2
+      X-Gu-Jas:
+      - c9fbb165d63c6bedbe65d182028517f2!416162379@qtp-970481529-3712
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1a-10.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:10 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22Andy%20Gray%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:09 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:10 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - 2788d02781bc3e7e5f7dc80617060c00
+      X-Gu-Jas:
+      - 2788d02781bc3e7e5f7dc80617060c00!561912420@qtp-970481529-3660
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1a-10.mashery.com
+      Content-Length:
+      - '629'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJyZXNwb25zZSI6ewogICAgInN0YXR1cyI6Im9rIiwKICAgICJ1c2Vy
+        VGllciI6ImZyZWUiLAogICAgInRvdGFsIjoxLAogICAgInN0YXJ0SW5kZXgi
+        OjEsCiAgICAicGFnZVNpemUiOjEwLAogICAgImN1cnJlbnRQYWdlIjoxLAog
+        ICAgInBhZ2VzIjoxLAogICAgIm9yZGVyQnkiOiJuZXdlc3QiLAogICAgInJl
+        c3VsdHMiOlt7CiAgICAgICJpZCI6ImZvb3RiYWxsLzIwMTQvZmViLzE2L2Fy
+        c2VuYWwtdi1saXZlcnBvb2wtbGl2ZSIsCiAgICAgICJzZWN0aW9uSWQiOiJm
+        b290YmFsbCIsCiAgICAgICJzZWN0aW9uTmFtZSI6IkZvb3RiYWxsIiwKICAg
+        ICAgIndlYlB1YmxpY2F0aW9uRGF0ZSI6IjIwMTQtMDItMTZUMTY6MDI6MTRa
+        IiwKICAgICAgIndlYlRpdGxlIjoiQXJzZW5hbCB2IExpdmVycG9vbCDigJMg
+        bGl2ZSEgfCBKYWNvYiBTdGVpbmJlcmciLAogICAgICAid2ViVXJsIjoiaHR0
+        cDovL3d3dy50aGVndWFyZGlhbi5jb20vZm9vdGJhbGwvMjAxNC9mZWIvMTYv
+        YXJzZW5hbC12LWxpdmVycG9vbC1saXZlIiwKICAgICAgImFwaVVybCI6Imh0
+        dHA6Ly9jb250ZW50Lmd1YXJkaWFuYXBpcy5jb20vZm9vdGJhbGwvMjAxNC9m
+        ZWIvMTYvYXJzZW5hbC12LWxpdmVycG9vbC1saXZlIgogICAgfV0KICB9Cn0=
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:10 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22A%20R%20S%20L%20I%20V%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:10 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:11 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - 6754e2dd7f2f3186236c70b9408f4d0b
+      X-Gu-Jas:
+      - 6754e2dd7f2f3186236c70b9408f4d0b!1366695548@qtp-970481529-3682
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1b-11.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:11 GMT
+- request:
+    method: get
+    uri: http://content.guardianapis.com/search?format=json&from-date=2014-02-15&q=%22Getafe%20-%20Real%20Madrid%22&to-date=2014-02-16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=20
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 16 Feb 2014 16:04:11 GMT
+      Expires:
+      - Sun, 16 Feb 2014 16:05:12 GMT
+      Server:
+      - Mashery Proxy
+      Vary:
+      - Accept,Accept-Encoding
+      X-Content-Api-Build:
+      - '3330'
+      X-Gu-Httpd:
+      - d90e4c9de6f481098176d3373283929f
+      X-Gu-Jas:
+      - d90e4c9de6f481098176d3373283929f!2108096286@qtp-970481529-3672
+      X-Lift-Version:
+      - 2.5-RC2
+      X-Mashery-Responder:
+      - prod-p-worker-eu-west-1a-12.mashery.com
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "response":{
+            "status":"ok",
+            "userTier":"free",
+            "total":0,
+            "startIndex":0,
+            "pageSize":10,
+            "currentPage":1,
+            "pages":0,
+            "orderBy":"newest",
+            "results":[]
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:12 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=10%20Facts%20About%20Me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 208310082, 1891691476
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '227'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:12 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1054 miss (0), cp1066 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"-1":{"ns":0,"title":"10
+        Facts About Me","missing":"","contentmodel":"wikitext","pagelanguage":"en","fullurl":"http://en.wikipedia.org/wiki/10_Facts_About_Me","editurl":"http://en.wikipedia.org/w/index.php?title=10_Facts_About_Me&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:12 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=Samet%20Ecemile%20Tkib
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 3682116940, 3585938814
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '226'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:12 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1065 miss (0), cp1054 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"-1":{"ns":0,"title":"Samet
+        Ecemile Tkib","missing":"","contentmodel":"wikitext","pagelanguage":"en","fullurl":"http://en.wikipedia.org/wiki/Samet_Ecemile_Tkib","editurl":"http://en.wikipedia.org/w/index.php?title=Samet_Ecemile_Tkib&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:13 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=British%20Band
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 2636706130, 2172034478
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '402'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:12 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1068 miss (0), cp1053 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"13353120":{"pageid":13353120,"ns":0,"title":"British
+        Band","contentmodel":"wikitext","pagelanguage":"en","touched":"2014-02-13T03:22:59Z","lastrevid":566364656,"counter":"","length":25762,"fullurl":"http://en.wikipedia.org/wiki/British_Band","editurl":"http://en.wikipedia.org/w/index.php?title=British_Band&action=edit","categories":[{"ns":14,"title":"Category:Algonquian
+        peoples"},{"ns":14,"title":"Category:Black Hawk War"},{"ns":14,"title":"Category:History
+        of Illinois"},{"ns":14,"title":"Category:Native American history of Illinois"},{"ns":14,"title":"Category:Sac
+        and Fox"},{"ns":14,"title":"Category:Use dmy dates from June 2013"}]}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:13 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=Avril%20Lavigne%20Midas%20Ivory%20Astro
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 2636706373, 2172034765
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '242'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:12 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1068 miss (0), cp1053 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"-1":{"ns":0,"title":"Avril
+        Lavigne Midas Ivory Astro","missing":"","contentmodel":"wikitext","pagelanguage":"en","fullurl":"http://en.wikipedia.org/wiki/Avril_Lavigne_Midas_Ivory_Astro","editurl":"http://en.wikipedia.org/w/index.php?title=Avril_Lavigne_Midas_Ivory_Astro&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:13 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=Andy%20Gray
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 67666700, 3658917801
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '281'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:13 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1067 miss (0), cp1068 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"5577456":{"pageid":5577456,"ns":0,"title":"Andy
+        Gray","contentmodel":"wikitext","pagelanguage":"en","touched":"2014-02-14T12:18:22Z","lastrevid":104185201,"counter":"","length":24,"redirect":"","fullurl":"http://en.wikipedia.org/wiki/Andy_Gray","editurl":"http://en.wikipedia.org/w/index.php?title=Andy_Gray&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:13 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=A%20R%20S%20L%20I%20V
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 726801827, 2575303018
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '227'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:14 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1066 miss (0), cp1065 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"-1":{"ns":0,"title":"A
+        R S L I V","missing":"","contentmodel":"wikitext","pagelanguage":"en","fullurl":"http://en.wikipedia.org/wiki/A_R_S_L_I_V","editurl":"http://en.wikipedia.org/w/index.php?title=A_R_S_L_I_V&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:14 GMT
+- request:
+    method: get
+    uri: http://en.wikipedia.org/w/api.php?action=query&format=json&inprop=url&prop=info%7Ccategories&rvprop=content&titles=Getafe%20-%20Real%20Madrid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby/2.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.9+wmf1
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto
+      X-Vary-Options:
+      - Accept-Encoding;list-contains=gzip,X-Forwarded-Proto,Cookie;string-contains=enwikiToken;string-contains=enwikiLoggedOut;string-contains=forceHTTPS;string-contains=enwikiSession;string-contains=centralauth_Token;string-contains=centralauth_Session;string-contains=centralauth_LoggedOut;string-contains=mf_useformat;string-contains=stopMobileRedirect
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Varnish:
+      - 208312978, 2575303309
+      Via:
+      - 1.1 varnish, 1.1 varnish
+      Content-Length:
+      - '231'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 16 Feb 2014 16:04:14 GMT
+      Age:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Cache:
+      - cp1054 miss (0), cp1065 frontend miss (0)
+    body:
+      encoding: UTF-8
+      string: '{"warnings":{"main":{"*":"Unrecognized parameter: ''rvprop''"}},"query":{"pages":{"-1":{"ns":0,"title":"Getafe
+        - Real Madrid","missing":"","contentmodel":"wikitext","pagelanguage":"en","fullurl":"http://en.wikipedia.org/wiki/Getafe_-_Real_Madrid","editurl":"http://en.wikipedia.org/w/index.php?title=Getafe_-_Real_Madrid&action=edit"}}}}'
+    http_version: 
+  recorded_at: Sun, 16 Feb 2014 16:04:14 GMT
+recorded_with: VCR 2.8.0
